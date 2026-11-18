@@ -18,9 +18,37 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Ahmad Farhan",
+    alternateName: "Farhan.dev",
+    url: "https://my-portfolio-pi-sable.vercel.app",
+    jobTitle: "Full-Stack Web & Mobile Developer",
+    knowsAbout: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Flutter",
+      "Supabase",
+      "Tailwind CSS",
+    ],
+    sameAs: [
+      "https://www.linkedin.com/in/ahmadfarhan-dev",
+      // Jika mau tambahkan link GitHub, tulis di bawah baris ini:
+      // "https://github.com/username-github-kamu",
+    ],
+  };
+
   return (
     <html lang="id" className="scroll-smooth">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
