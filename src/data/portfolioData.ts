@@ -3,12 +3,12 @@
 export const personalInfo = {
   name: "Ahmad Farhan",
   role: "Full-Stack Web & Mobile Developer",
-  bio: "Membangun aplikasi web dan mobile berkualitas tinggi, performa tinggi, serta berfokus pada pengalaman pengguna yang responsif dan modern.",
+  bio: "Full-Stack Developer berpengalaman membangun solusi digital nyata, mulai dari sistem absensi guru berbasis web (Next.js) & mobile (Flutter), website profil sekolah, sistem manajemen penilaian siswa, hingga Company Profile & Katalog Digital untuk perusahaan perdagangan dan logistik.",
   location: "Indonesia",
-  github: "https://github.com/AhmadFarhan100",
-  email: "mailto:programerr.f.a@gmail.com",
-  whatsapp: "https://wa.me/6281274411106", // Ganti dengan nomormu (awali dengan 62)
-  instagram: "https://instagram.com/farhannmjw", // Ganti dengan username IG-mu
+  github: "https://github.com/AhmadFarhan00",
+  email: "mailto:emailkamu@example.com",
+  whatsapp: "https://wa.me/6281234567890", // Pastikan nomor WA sudah sesuai
+  instagram: "https://instagram.com/usernamekamu", // Pastikan username IG sudah sesuai
 };
 
 export const skills = [
@@ -23,27 +23,35 @@ export const skills = [
 
 export const projects = [
   {
-    title: "Aplikasi Penilaian Siswa",
+    title: "Sistem Absensi Guru (Web & Mobile)",
     description:
-      "Sistem manajemen dan analisis penilaian siswa berbasis web dengan fitur analitik lengkap.",
+      "Ekosistem presensi dan rekapitulasi kehadiran guru secara real-time yang terintegrasi antara dashboard admin berbasis web dan aplikasi mobile.",
+    techStack: ["Next.js", "Flutter", "Dart", "Supabase"],
+    link: "#",
+    github: "https://github.com/AhmadFarhan00",
+  },
+  {
+    title: "Website Resmi Sekolah",
+    description:
+      "Portal informasi akademik, profil institusi pendidikan, publikasi berita kegiatan, dan sistem penerimaan informasi bagi siswa maupun orang tua.",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    link: "#",
+    github: "https://github.com/AhmadFarhan00/Adnani-website",
+  },
+  {
+    title: "Sistem Manajemen Penilaian Siswa",
+    description:
+      "Aplikasi web untuk pengelolaan nilai akademik, pengolahan rapor digital, dan pemantauan perkembangan evaluasi belajar siswa secara terstruktur.",
     techStack: ["Next.js", "React", "Tailwind CSS", "Supabase"],
     link: "#",
-    github: "#",
+    github: "https://github.com/AhmadFarhan00",
   },
   {
-    title: "Teacher Mobile Attendance",
+    title: "Company Profile & Katalog Digital",
     description:
-      "Aplikasi presensi dan kehadiran guru berbasis mobile dengan pencatatan real-time.",
-    techStack: ["Flutter", "Dart", "Supabase"],
+      "Website profil perusahaan perdagangan dan logistik komoditas yang dilengkapi katalog produk interaktif serta informasi layanan distribusi.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
     link: "#",
-    github: "#",
-  },
-  {
-    title: "Voucher & Claim Code Platform",
-    description:
-      "Web aplikasi pendistribusian hadiah digital dan klaim kode voucher terintegrasi.",
-    techStack: ["Next.js", "Tailwind CSS", "Supabase"],
-    link: "#",
-    github: "#",
+    github: "https://github.com/AhmadFarhan00",
   },
 ];
