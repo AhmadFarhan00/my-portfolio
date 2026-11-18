@@ -45,13 +45,13 @@ export default function Hero() {
 
         {/* === TOMBOL AKSI === */}
         <div className="flex flex-wrap gap-4 pt-4">
-          {/* Tombol Hubungi Saya (Dropdown) */}
+          {/* Tombol Hubungi Saya (Dropdown: LinkedIn, WA, IG) */}
           <div className="relative">
             <button
               onClick={() => setShowContact(!showContact)}
               className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-xl font-medium transition-all shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:shadow-[0_0_30px_rgba(59,130,246,0.6)]"
             >
-              <Mail className="w-5 h-5" /> Hubungi Saya
+              <MessageCircle className="w-5 h-5" /> Hubungi Saya
             </button>
 
             {/* Menu Pop-up Kontak */}
@@ -59,15 +59,33 @@ export default function Hero() {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="absolute top-full left-0 mt-3 bg-slate-900/90 border border-slate-700 p-2 rounded-xl shadow-2xl flex flex-col gap-1 w-52 z-50 backdrop-blur-md"
+                className="absolute top-full left-0 mt-3 bg-slate-900/95 border border-slate-700 p-2 rounded-xl shadow-2xl flex flex-col gap-1 w-52 z-50 backdrop-blur-md"
               >
+                {/* LinkedIn */}
                 <a
-                  href={personalInfo.email}
+                  href={personalInfo.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-3 hover:bg-slate-800 p-3 rounded-lg text-sm text-slate-200 hover:text-white transition group"
                 >
-                  <Mail className="w-5 h-5 text-blue-400 group-hover:scale-110 transition-transform" />{" "}
-                  Email
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-5 h-5 text-sky-400 group-hover:scale-110 transition-transform"
+                  >
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect width="4" height="12" x="2" y="9"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                  LinkedIn
                 </a>
+
+                {/* WhatsApp */}
                 <a
                   href={personalInfo.whatsapp}
                   target="_blank"
@@ -77,7 +95,8 @@ export default function Hero() {
                   <MessageCircle className="w-5 h-5 text-green-400 group-hover:scale-110 transition-transform" />{" "}
                   WhatsApp
                 </a>
-                {/* BARU */}
+
+                {/* Instagram */}
                 <a
                   href={personalInfo.instagram}
                   target="_blank"
@@ -118,6 +137,18 @@ export default function Hero() {
             className="flex items-center gap-2 bg-slate-900/50 hover:bg-slate-800 text-white px-6 py-3 rounded-xl border border-slate-700 transition-all backdrop-blur-sm"
           >
             <Code2 className="w-5 h-5" /> GitHub
+          </a>
+        </div>
+
+        {/* === TEKS EMAIL DI LUAR === */}
+        <div className="pt-2 flex items-center gap-2 text-sm text-slate-400">
+          <Mail className="w-4 h-4 text-cyan-400 shrink-0" />
+          <span>Email:</span>
+          <a
+            href={personalInfo.email}
+            className="text-slate-200 hover:text-cyan-400 font-medium underline underline-offset-4 decoration-slate-700 hover:decoration-cyan-400 transition-colors select-all"
+          >
+            {personalInfo.emailText}
           </a>
         </div>
       </motion.div>
